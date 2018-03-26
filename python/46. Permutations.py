@@ -17,13 +17,11 @@ For example,
 
 '''
 
-import copy
-
 class Solution(object):
     
     def permute_onestep(self, nums_vect_old, new_number):
 
-        if nums_vect_old is None:
+        if len(nums_vect_old) == 0:
 
             return [[new_number]]
 
@@ -33,11 +31,11 @@ class Solution(object):
 
             for i in range(len(vect) + 1):
 
-                nums_temp = copy.copy(vect)
+                nums_temp = vect.copy()
                 nums_temp.insert(i, new_number)
                 nums_vect_new.append(nums_temp)
 
-        return nums_vect_new    
+        return nums_vect_new
     
     
     def permute(self, nums):
@@ -55,3 +53,5 @@ class Solution(object):
             elm = nums.pop()
         
             return self.permute_onestep(self.permute(nums), elm)
+        
+        return [[]]
