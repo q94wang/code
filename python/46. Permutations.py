@@ -21,9 +21,9 @@ class Solution(object):
     
     def permute_onestep(self, nums_vect_old, new_number):
 
-        if len(nums_vect_old) == 0:
+#         if len(nums_vect_old) == 0:
 
-            return [[new_number]]
+#             return [[new_number]]
 
         nums_vect_new = []
 
