@@ -17,9 +17,9 @@ class Solution(object):
     
     def permute_onestep(self, nums_vect_old, new_number):
 
-#         if len(nums_vect_old) == 0:
+        if len(nums_vect_old) is None:
 
-#             return [[new_number]]
+            return [[new_number]]
 
         nums_vect_new = []
 
@@ -49,5 +49,3 @@ class Solution(object):
             elm = nums.pop()
         
             return self.permute_onestep(self.permute(nums), elm)
-        
-        return [[]]
